@@ -1,0 +1,46 @@
+<!-- FASE 1 - CONTENITORE PRINCIPALE DEI TAB -->
+<div class="tabs-container">
+  <!-- FASE 2 - PULSANTI DEI TAB -->
+  <div class="tabs">
+    <button type="button" (click)="selectTab(1)" [class.active]="activeTab() === 1">
+      First Tab
+    </button>
+
+    <button type="button" (click)="selectTab(2)" [class.active]="activeTab() === 2">
+      Second Tab
+    </button>
+
+    <button type="button" (click)="selectTab(3)" [class.active]="activeTab() === 3">
+      Third Tab
+    </button>
+
+    <button type="button" (click)="selectTab(4)" [class.active]="activeTab() === 4">
+      Fourth Tab
+    </button>
+  </div>
+
+  <!-- FASE 3 - CONTENUTO DEL TAB ATTIVO -->
+  @if (activeTab() === 1) {
+    <div class="tab-content">
+      <p>First Tab content to be displayed here.</p>
+    </div>
+  }
+
+  @if (activeTab() === 2) {
+    <div class="tab-content">
+      <p>Second Tab content to be displayed here.</p>
+    </div>
+  }
+
+  @if (activeTab() === 3) {
+    <div class="tab-content">
+      <p>Third Tab content to be displayed here.</p>
+    </div>
+  }
+
+  @if (activeTab() === 4) {
+    <div class="tab-content">
+      <p>Fourth Tab content to be displayed here.</p>
+    </div>
+  }
+</div>
