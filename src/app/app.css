@@ -1,0 +1,4 @@
+/* Contenitore principale dell'app */
+:host {
+  display: block;
+}
