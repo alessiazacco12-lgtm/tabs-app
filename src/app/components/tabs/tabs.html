@@ -2,8 +2,8 @@
 <div class="tabs-container">
   <!-- FASE 2 - PULSANTI DEI TAB -->
   <div class="tabs">
-    @for (tab of tabs; track tab.title; let index = $index) {
-      <button type="button" (click)="selectTab(index)" [class.active]="activeTab() === index">
+    @for (tab of tabs; track tab.title) {
+      <button type="button" (click)="selectTab($index)" [class.active]="activeTab() === $index">
         {{ tab.title }}
       </button>
     }
